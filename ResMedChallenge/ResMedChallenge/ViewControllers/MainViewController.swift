@@ -11,21 +11,47 @@ class MainViewController: UIViewController {
 
     @IBOutlet var getResultsButton: UIButton!
 
+    var viewModel = Router.instance.mainStoryboard.mainViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        viewModel.didGetResults = { [ weak self ] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self?.resultsReceived()
+            }
+        }
+
+        viewModel.errorDidOccur = { [ weak self ] description in
+            self?.simpleAlert(title: .errorAlertTitle, description: description, buttonText: "OK")
+        }
 
         getResultsButton.layer.cornerRadius = getResultsButton.frame.height / 2
     }
 
     @IBAction func onGetResultsButtonTap(_ sender: UIButton) {
-        let loadingVC = Router.instance.mainStoryboard.loadingViewController(startSpinner: true)
-        self.present(loadingVC, animated: true)
+        viewModel.getResults()
+        self.loadSpinner(true)
+    }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [ weak self ] in
-            let resultsVC = Router.instance.mainStoryboard.resultsViewController()
-            loadingVC.dismiss(animated: true)
-            self?.present(resultsVC, animated: true)
+    private func loadSpinner(_ startSpinner: Bool) {
+        let loadingVC = Router.instance.mainStoryboard.loadingViewController(startSpinner: startSpinner)
+
+        if startSpinner {
+            present(loadingVC, animated: true, completion: nil)
+        } else {
+            dismiss(animated: true, completion: nil)
         }
+    }
+
+    private func resultsReceived() {
+        guard let sportResults = viewModel.sportResults else { return }
+
+        let resultsVC = Router.instance.mainStoryboard.resultsViewController(sportResults: sportResults)
+
+        loadSpinner(false)
+
+        present(resultsVC, animated: true, completion: nil)
     }
 
 }

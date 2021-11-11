@@ -9,6 +9,10 @@ import UIKit
 
 protocol MainRouterable {
 
+    // View Controllers
     func loadingViewController(startSpinner: Bool) -> LoadingIndicatorViewController
-    func resultsViewController() -> ResultsViewController
+    func resultsViewController(sportResults: SportResultsResponse) -> ResultsViewController
+
+    // View Models
+    func mainViewModel() -> MainViewModellable
 }

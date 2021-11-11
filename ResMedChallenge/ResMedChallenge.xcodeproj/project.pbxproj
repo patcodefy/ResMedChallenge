@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431CBFA9273D8B1D006E3344 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CBFA8273D8B1D006E3344 /* Strings.swift */; };
+		431CBFAD273D8FDD006E3344 /* SportResultsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CBFAC273D8FDD006E3344 /* SportResultsRequest.swift */; };
+		431CBFB0273D9B37006E3344 /* ApiServicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CBFAF273D9B37006E3344 /* ApiServicable.swift */; };
+		431CBFB2273D9BC4006E3344 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CBFB1273D9BC4006E3344 /* ApiService.swift */; };
+		431CBFB4273D9E44006E3344 /* MainViewModellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CBFB3273D9E44006E3344 /* MainViewModellable.swift */; };
+		431CBFB7273D9E73006E3344 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CBFB6273D9E73006E3344 /* MainViewModel.swift */; };
+		431CBFB9273DA11F006E3344 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CBFB8273DA11F006E3344 /* BaseViewModel.swift */; };
+		431CBFBC273DA61E006E3344 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CBFBB273DA61E006E3344 /* UIViewController.swift */; };
 		437178CB273B790000A88676 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437178CA273B790000A88676 /* AppDelegate.swift */; };
 		437178CD273B790000A88676 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437178CC273B790000A88676 /* SceneDelegate.swift */; };
 		437178CF273B790000A88676 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437178CE273B790000A88676 /* MainViewController.swift */; };
@@ -26,6 +34,10 @@
 		43717922273B9D7A00A88676 /* Routerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43717921273B9D7A00A88676 /* Routerable.swift */; };
 		43717924273B9D9800A88676 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43717923273B9D9800A88676 /* Router.swift */; };
 		43717926273BA7A400A88676 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43717925273BA7A400A88676 /* ResultsViewController.swift */; };
+		43EDE76C273C8A150095968B /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDE76B273C8A150095968B /* HTTPMethod.swift */; };
+		43EDE76E273C8B140095968B /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDE76D273C8B140095968B /* RequestData.swift */; };
+		43EDE770273C8FC00095968B /* RequestEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDE76F273C8FC00095968B /* RequestEngine.swift */; };
+		43EDE772273D893D0095968B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDE771273D893D0095968B /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +58,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		431CBFA8273D8B1D006E3344 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		431CBFAC273D8FDD006E3344 /* SportResultsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportResultsRequest.swift; sourceTree = "<group>"; };
+		431CBFAF273D9B37006E3344 /* ApiServicable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServicable.swift; sourceTree = "<group>"; };
+		431CBFB1273D9BC4006E3344 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		431CBFB3273D9E44006E3344 /* MainViewModellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModellable.swift; sourceTree = "<group>"; };
+		431CBFB6273D9E73006E3344 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		431CBFB8273DA11F006E3344 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		431CBFBB273DA61E006E3344 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		437178C7273B790000A88676 /* ResMedChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResMedChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		437178CA273B790000A88676 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		437178CC273B790000A88676 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +89,10 @@
 		43717921273B9D7A00A88676 /* Routerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routerable.swift; sourceTree = "<group>"; };
 		43717923273B9D9800A88676 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		43717925273BA7A400A88676 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		43EDE76B273C8A150095968B /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		43EDE76D273C8B140095968B /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
+		43EDE76F273C8FC00095968B /* RequestEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEngine.swift; sourceTree = "<group>"; };
+		43EDE771273D893D0095968B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +120,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		431CBFAA273D8F9F006E3344 /* SportResultsRequest */ = {
+			isa = PBXGroup;
+			children = (
+				431CBFAC273D8FDD006E3344 /* SportResultsRequest.swift */,
+			);
+			path = SportResultsRequest;
+			sourceTree = "<group>";
+		};
+		431CBFAE273D9B23006E3344 /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				431CBFAF273D9B37006E3344 /* ApiServicable.swift */,
+				431CBFB1273D9BC4006E3344 /* ApiService.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		431CBFB5273D9E5F006E3344 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				431CBFB3273D9E44006E3344 /* MainViewModellable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		431CBFBA273DA5FA006E3344 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				431CBFBB273DA61E006E3344 /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		437178BE273B790000A88676 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +176,7 @@
 		437178C9273B790000A88676 /* ResMedChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				431CBFBA273DA5FA006E3344 /* Extensions */,
 				43717901273B79B100A88676 /* Resources */,
 				43717900273B799700A88676 /* Application */,
 				437178FF273B798A00A88676 /* Networking */,
@@ -172,6 +230,9 @@
 		437178FC273B796C00A88676 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				431CBFB5273D9E5F006E3344 /* Protocols */,
+				431CBFB6273D9E73006E3344 /* MainViewModel.swift */,
+				431CBFB8273DA11F006E3344 /* BaseViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -195,6 +256,12 @@
 		437178FF273B798A00A88676 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				431CBFAE273D9B23006E3344 /* ApiService */,
+				431CBFAA273D8F9F006E3344 /* SportResultsRequest */,
+				43EDE76B273C8A150095968B /* HTTPMethod.swift */,
+				43EDE76D273C8B140095968B /* RequestData.swift */,
+				43EDE76F273C8FC00095968B /* RequestEngine.swift */,
+				43EDE771273D893D0095968B /* NetworkError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -212,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				437178D3273B790100A88676 /* Assets.xcassets */,
+				431CBFA8273D8B1D006E3344 /* Strings.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -384,18 +452,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431CBFB4273D9E44006E3344 /* MainViewModellable.swift in Sources */,
+				43EDE772273D893D0095968B /* NetworkError.swift in Sources */,
+				431CBFB2273D9BC4006E3344 /* ApiService.swift in Sources */,
 				43717922273B9D7A00A88676 /* Routerable.swift in Sources */,
+				431CBFBC273DA61E006E3344 /* UIViewController.swift in Sources */,
 				43717913273B874200A88676 /* TennisResult.swift in Sources */,
+				431CBFB9273DA11F006E3344 /* BaseViewModel.swift in Sources */,
+				431CBFAD273D8FDD006E3344 /* SportResultsRequest.swift in Sources */,
+				431CBFB0273D9B37006E3344 /* ApiServicable.swift in Sources */,
+				43EDE76C273C8A150095968B /* HTTPMethod.swift in Sources */,
 				437178CF273B790000A88676 /* MainViewController.swift in Sources */,
 				4371790C273B868400A88676 /* SportResultsResponse.swift in Sources */,
 				437178CB273B790000A88676 /* AppDelegate.swift in Sources */,
+				43EDE76E273C8B140095968B /* RequestData.swift in Sources */,
 				43717915273B957C00A88676 /* LoadingIndicatorViewController.swift in Sources */,
 				437178CD273B790000A88676 /* SceneDelegate.swift in Sources */,
+				431CBFA9273D8B1D006E3344 /* Strings.swift in Sources */,
 				43717911273B871600A88676 /* NbaResult.swift in Sources */,
 				43717924273B9D9800A88676 /* Router.swift in Sources */,
 				4371791F273B9AF000A88676 /* MainRouterable.swift in Sources */,
 				43717926273BA7A400A88676 /* ResultsViewController.swift in Sources */,
+				43EDE770273C8FC00095968B /* RequestEngine.swift in Sources */,
 				4371791D273B9ADE00A88676 /* MainRouter.swift in Sources */,
+				431CBFB7273D9E73006E3344 /* MainViewModel.swift in Sources */,
 				4371790F273B86EB00A88676 /* F1Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,9 +8,15 @@
 import UIKit
 
 class MainRouter: MainRouterable {
+    private let apiService: ApiServicable
 
     private let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
+    init() {
+        self.apiService = ApiService()
+    }
+
+    // View Controllers
     func loadingViewController(startSpinner: Bool) -> LoadingIndicatorViewController {
         let vc = self.mainStoryboard.instantiateViewController(withIdentifier: "LoadingIndicatorViewController") as! LoadingIndicatorViewController
         vc.startSpinning = startSpinner
@@ -18,9 +24,16 @@ class MainRouter: MainRouterable {
         return vc
     }
 
-    func resultsViewController() -> ResultsViewController {
+    func resultsViewController(sportResults: SportResultsResponse) -> ResultsViewController {
         let vc = self.mainStoryboard.instantiateViewController(withIdentifier: "ResultsViewController") as! ResultsViewController
+        vc.sportResults = sportResults
 
         return vc
     }
+
+    // View Models
+    func mainViewModel() -> MainViewModellable {
+        return MainViewModel(apiService: apiService)
+    }
+
 }

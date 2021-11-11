@@ -11,6 +11,8 @@ class ResultsViewController: UIViewController {
 
     @IBOutlet var resultsTableView: UITableView!
 
+    var sportResults: SportResultsResponse?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +23,11 @@ class ResultsViewController: UIViewController {
 
 extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        guard let sportResults = self.sportResults else { return 0 }
+
+        let numberOfRows = sportResults.Tennis.count + sportResults.f1Results.count + sportResults.nbaResults.count
+
+        return numberOfRows
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
