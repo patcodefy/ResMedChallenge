@@ -25,7 +25,7 @@
 		437178D2273B790000A88676 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437178D0273B790000A88676 /* Main.storyboard */; };
 		437178D4273B790100A88676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 437178D3273B790100A88676 /* Assets.xcassets */; };
 		437178D7273B790100A88676 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437178D5273B790100A88676 /* LaunchScreen.storyboard */; };
-		437178E2273B790200A88676 /* ResMedChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437178E1273B790200A88676 /* ResMedChallengeTests.swift */; };
+		437178E2273B790200A88676 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437178E1273B790200A88676 /* MainViewModelTests.swift */; };
 		437178EC273B790200A88676 /* ResMedChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437178EB273B790200A88676 /* ResMedChallengeUITests.swift */; };
 		437178EE273B790200A88676 /* ResMedChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437178ED273B790200A88676 /* ResMedChallengeUITestsLaunchTests.swift */; };
 		4371790C273B868400A88676 /* SportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371790B273B868400A88676 /* SportResult.swift */; };
@@ -35,6 +35,9 @@
 		43717922273B9D7A00A88676 /* Routerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43717921273B9D7A00A88676 /* Routerable.swift */; };
 		43717924273B9D9800A88676 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43717923273B9D9800A88676 /* Router.swift */; };
 		43717926273BA7A400A88676 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43717925273BA7A400A88676 /* ResultsViewController.swift */; };
+		437CB3C12740482A0094589B /* ApiServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437CB3C02740482A0094589B /* ApiServiceTest.swift */; };
+		437CB3C527404E260094589B /* ResultsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437CB3C427404E260094589B /* ResultsViewModelTests.swift */; };
+		437CB3C727404F4D0094589B /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437CB3C627404F4D0094589B /* MockData.swift */; };
 		43EDE76C273C8A150095968B /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDE76B273C8A150095968B /* HTTPMethod.swift */; };
 		43EDE76E273C8B140095968B /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDE76D273C8B140095968B /* RequestData.swift */; };
 		43EDE770273C8FC00095968B /* RequestEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDE76F273C8FC00095968B /* RequestEngine.swift */; };
@@ -80,7 +83,7 @@
 		437178D6273B790100A88676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		437178D8273B790100A88676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		437178DD273B790200A88676 /* ResMedChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResMedChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		437178E1273B790200A88676 /* ResMedChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResMedChallengeTests.swift; sourceTree = "<group>"; };
+		437178E1273B790200A88676 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		437178E7273B790200A88676 /* ResMedChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResMedChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		437178EB273B790200A88676 /* ResMedChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResMedChallengeUITests.swift; sourceTree = "<group>"; };
 		437178ED273B790200A88676 /* ResMedChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResMedChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -91,6 +94,9 @@
 		43717921273B9D7A00A88676 /* Routerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routerable.swift; sourceTree = "<group>"; };
 		43717923273B9D9800A88676 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		43717925273BA7A400A88676 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		437CB3C02740482A0094589B /* ApiServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceTest.swift; sourceTree = "<group>"; };
+		437CB3C427404E260094589B /* ResultsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModelTests.swift; sourceTree = "<group>"; };
+		437CB3C627404F4D0094589B /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		43EDE76B273C8A150095968B /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		43EDE76D273C8B140095968B /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
 		43EDE76F273C8FC00095968B /* RequestEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEngine.swift; sourceTree = "<group>"; };
@@ -198,7 +204,10 @@
 		437178E0273B790200A88676 /* ResMedChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				437178E1273B790200A88676 /* ResMedChallengeTests.swift */,
+				437CB3BF274047F70094589B /* Services */,
+				437178E1273B790200A88676 /* MainViewModelTests.swift */,
+				437CB3C427404E260094589B /* ResultsViewModelTests.swift */,
+				437CB3C627404F4D0094589B /* MockData.swift */,
 			);
 			path = ResMedChallengeTests;
 			sourceTree = "<group>";
@@ -314,6 +323,14 @@
 				4371791E273B9AF000A88676 /* MainRouterable.swift */,
 			);
 			path = MainRouter;
+			sourceTree = "<group>";
+		};
+		437CB3BF274047F70094589B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				437CB3C02740482A0094589B /* ApiServiceTest.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,7 +497,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				437178E2273B790200A88676 /* ResMedChallengeTests.swift in Sources */,
+				437CB3C527404E260094589B /* ResultsViewModelTests.swift in Sources */,
+				437CB3C727404F4D0094589B /* MockData.swift in Sources */,
+				437CB3C12740482A0094589B /* ApiServiceTest.swift in Sources */,
+				437178E2273B790200A88676 /* MainViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
