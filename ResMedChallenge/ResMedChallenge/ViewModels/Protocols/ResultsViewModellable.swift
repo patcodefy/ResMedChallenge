@@ -11,8 +11,8 @@ protocol ResultsViewModellable: BaseViewModel {
 
     var didGetRecentRecords    : (() -> Void)? { get set }
 
-    var mostRecentDate  : Date? { get }
-    var outputSentences : [String] { get }
+    var mostRecentDate  : Date?         { get }
+    var outputSentences : [[String]]    { get }
 
     func loadData()
 }

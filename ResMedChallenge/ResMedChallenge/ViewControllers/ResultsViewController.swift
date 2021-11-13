@@ -18,7 +18,8 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
 
         viewModel.didGetRecentRecords = { [ weak self ] in
-            self?.dateTitleLabel.text = self?.viewModel.mostRecentDate?.toString()
+            guard let date = self?.viewModel.mostRecentDate?.toString() else { return }
+            self?.dateTitleLabel.text = "Results for \(date)"
 
             self?.resultsTableView.reloadData()
         }
@@ -37,7 +38,8 @@ extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
 
-        content.text = viewModel.outputSentences[indexPath.item]
+        content.text = viewModel.outputSentences[indexPath.item].first
+        content.secondaryText = viewModel.outputSentences[indexPath.item].last
 
         cell.contentConfiguration = content
         return cell

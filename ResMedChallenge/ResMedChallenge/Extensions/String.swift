@@ -9,14 +9,13 @@ import Foundation
 
 extension String {
 
-    func toDate() -> Date? {
+    func toDate(format: String = "MMM d, yyyy h:mm:ss a") -> Date {
         let dateFormatter = DateFormatter()
 
-        dateFormatter.dateFormat = "MMM d, yyyy h:mm:ss a"
+        dateFormatter.dateFormat = format
         dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
-        guard let date = dateFormatter.date(from: self) else { return nil }
 
-        return date
+        return dateFormatter.date(from: self) ?? Date()
     }
 
 }

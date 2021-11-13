@@ -14,7 +14,7 @@ class ResultsViewModel: BaseViewModel, ResultsViewModellable {
     var sportResults    : [String: [SportResult]]?
     var mostRecentDate  : Date?
 
-    private (set) var outputSentences: [String] = []
+    private (set) var outputSentences   : [[String]] = []
 
     init(sportResults: [String: [SportResult]]) {
         self.sportResults = sportResults
@@ -36,8 +36,9 @@ class ResultsViewModel: BaseViewModel, ResultsViewModellable {
 
         for (category, categoryResults) in sportResults {
             for categoryResult in categoryResults {
-                if let date1 = categoryResult.publicationDate.toDate(), let recentDate = mostRecentDate {
-                    if Calendar.current.compare(date1, to: recentDate, toGranularity: .day) == .orderedSame {
+                if let recentDate = mostRecentDate {
+                    let date = categoryResult.publicationDate.toDate()
+                    if Calendar.current.compare(date, to: recentDate, toGranularity: .day) == .orderedSame {
                         createOutput(category: category, categoryResult: categoryResult)
                     }
                 }
@@ -50,16 +51,21 @@ class ResultsViewModel: BaseViewModel, ResultsViewModellable {
         switch category {
         case "f1Results":
             guard let seconds = categoryResult.seconds else { break }
-            outputSentences.append("\(categoryResult.winner) wins \(categoryResult.tournament) by \(seconds)")
+            let output = ["\(categoryResult.winner) wins \(categoryResult.tournament) by \(seconds)", categoryResult.publicationDate]
+            outputSentences.append(output)
         case "nbaResults":
             guard let mvp = categoryResult.mvp, let gameNumber = categoryResult.gameNumber else { break }
-            outputSentences.append("\(mvp) leads \(categoryResult.winner) to game \(gameNumber) in the \(categoryResult.tournament)")
-        case "tennis":
-            guard let loser = categoryResult.looser, let sets = categoryResult.numberOfSets else { break }
-            outputSentences.append("\(categoryResult.tournament): \(categoryResult.winner) wins against \(loser) in \(sets)")
+            let output = ["\(mvp) leads \(categoryResult.winner) to game \(gameNumber) in the \(categoryResult.tournament)", categoryResult.publicationDate]
+            outputSentences.append(output)
+        case "Tennis":
+            guard let loser = categoryResult.looser?.trimmingCharacters(in: .whitespaces), let sets = categoryResult.numberOfSets else { break }
+            let output = ["\(categoryResult.tournament): \(categoryResult.winner) wins against \(loser) in \(sets)", categoryResult.publicationDate]
+            outputSentences.append(output)
         default:
             break
         }
+
+        outputSentences.sort{ $0[1].toDate().compare($1[1].toDate()) == .orderedDescending }
     }
 
 }
