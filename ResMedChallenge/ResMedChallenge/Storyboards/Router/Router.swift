@@ -11,7 +11,7 @@ class Router: Routerable {
 
     static var instance = Router()
 
-    let mainStoryboard: MainRouterable
+    let mainStoryboard  : MainRouterable
 
     init() {
         mainStoryboard = MainRouter()

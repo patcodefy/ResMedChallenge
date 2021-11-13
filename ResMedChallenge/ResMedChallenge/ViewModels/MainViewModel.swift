@@ -9,11 +9,11 @@ import Foundation
 
 class MainViewModel: BaseViewModel, MainViewModellable {
 
-    var didGetResults: (() -> Void)?
+    var didGetResults       : (() -> Void)?
 
-    var sportResults: SportResultsResponse?
+    var sportResults        : [String: [SportResult]]?
 
-    private let apiService: ApiServicable
+    private let apiService  : ApiServicable
 
     init(apiService: ApiServicable) {
         self.apiService = apiService

@@ -9,9 +9,9 @@ import Foundation
 
 protocol MainViewModellable: BaseViewModel {
 
-    var didGetResults: (() -> Void)? { get set }
+    var didGetResults   : (() -> Void)? { get set }
 
-    var sportResults: SportResultsResponse? { get }
+    var sportResults    : [String: [SportResult]]? { get }
 
     func getResults()
 }

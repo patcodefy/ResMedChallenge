@@ -11,7 +11,7 @@ protocol MainRouterable {
 
     // View Controllers
     func loadingViewController(startSpinner: Bool) -> LoadingIndicatorViewController
-    func resultsViewController(sportResults: SportResultsResponse) -> ResultsViewController
+    func resultsViewController(sportResults: [String: [SportResult]]) -> ResultsViewController
 
     // View Models
     func mainViewModel() -> MainViewModellable

@@ -9,5 +9,5 @@ import Foundation
 
 protocol ApiServicable {
 
-    func sportResultsRequest(onSuccess: ((SportResultsResponse) -> Void)?, onError: ((NetworkError) -> Void)?)
+    func sportResultsRequest(onSuccess: (([String: [SportResult]]) -> Void)?, onError: ((NetworkError) -> Void)?)
 }

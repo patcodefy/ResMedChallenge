@@ -9,8 +9,8 @@ import Foundation
 
 class SportResultsRequest: RequestEngine {
 
-    typealias ResponseType = SportResultsResponse
-    typealias CallbackType = SportResultsResponse
+    typealias ResponseType = [String: [SportResult]]
+    typealias CallbackType = [String: [SportResult]]
 
     static let path = ":443/results"
     static let method = HTTPMethod.post

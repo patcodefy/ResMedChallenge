@@ -9,7 +9,7 @@ import Foundation
 
 class ApiService: ApiServicable{
 
-    func sportResultsRequest(onSuccess: ((SportResultsResponse) -> Void)?, onError: ((NetworkError) -> Void)?) {
+    func sportResultsRequest(onSuccess: (([String: [SportResult]]) -> Void)?, onError: ((NetworkError) -> Void)?) {
         SportResultsRequest.execute(onSuccess: { result in
             onSuccess?(result)
         }, onError: { error in

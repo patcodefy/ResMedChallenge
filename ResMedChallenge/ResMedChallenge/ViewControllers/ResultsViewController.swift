@@ -9,30 +9,39 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
-    @IBOutlet var resultsTableView: UITableView!
+    @IBOutlet var resultsTableView  : UITableView!
+    @IBOutlet var dateTitleLabel    : UILabel!
 
-    var sportResults: SportResultsResponse?
+    var viewModel   : ResultsViewModellable!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        resultsTableView.delegate = self
-        resultsTableView.dataSource = self
+        viewModel.didGetRecentRecords = { [ weak self ] in
+            self?.dateTitleLabel.text = self?.viewModel.mostRecentDate?.toString()
+
+            self?.resultsTableView.reloadData()
+        }
+
+        viewModel.loadData()
     }
+
 }
 
 extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let sportResults = self.sportResults else { return 0 }
-
-        let numberOfRows = sportResults.Tennis.count + sportResults.f1Results.count + sportResults.nbaResults.count
-
-        return numberOfRows
+        return viewModel.outputSentences.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        var content = cell.defaultContentConfiguration()
+
+        content.text = viewModel.outputSentences[indexPath.item]
+
+        cell.contentConfiguration = content
         return cell
     }
 
 }
+

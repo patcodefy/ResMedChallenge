@@ -24,9 +24,9 @@ class MainRouter: MainRouterable {
         return vc
     }
 
-    func resultsViewController(sportResults: SportResultsResponse) -> ResultsViewController {
+    func resultsViewController(sportResults: [String: [SportResult]]) -> ResultsViewController {
         let vc = self.mainStoryboard.instantiateViewController(withIdentifier: "ResultsViewController") as! ResultsViewController
-        vc.sportResults = sportResults
+        vc.viewModel = resultsViewModel(sportResults: sportResults)
 
         return vc
     }
@@ -34,6 +34,10 @@ class MainRouter: MainRouterable {
     // View Models
     func mainViewModel() -> MainViewModellable {
         return MainViewModel(apiService: apiService)
+    }
+
+    private func resultsViewModel(sportResults: [String: [SportResult]]) -> ResultsViewModellable {
+        return ResultsViewModel(sportResults: sportResults)
     }
 
 }

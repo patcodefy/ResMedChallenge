@@ -18,20 +18,19 @@ class MainViewController: UIViewController {
 
         viewModel.didGetResults = { [ weak self ] in
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self?.loadSpinner(false)
                 self?.resultsReceived()
             }
         }
 
         viewModel.errorDidOccur = { [ weak self ] description in
-            self?.simpleAlert(title: .errorAlertTitle, description: description, buttonText: "OK")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self?.loadSpinner(false)
+                self?.simpleAlert(title: .errorAlertTitle, description: description, buttonText: "OK")
+            }
+
         }
 
-        getResultsButton.layer.cornerRadius = getResultsButton.frame.height / 2
-    }
-
-    @IBAction func onGetResultsButtonTap(_ sender: UIButton) {
-        viewModel.getResults()
-        self.loadSpinner(true)
     }
 
     private func loadSpinner(_ startSpinner: Bool) {
@@ -49,10 +48,12 @@ class MainViewController: UIViewController {
 
         let resultsVC = Router.instance.mainStoryboard.resultsViewController(sportResults: sportResults)
 
-        loadSpinner(false)
-
         present(resultsVC, animated: true, completion: nil)
     }
 
+    @IBAction func onGetResultsButtonTap(_ sender: UIButton) {
+        viewModel.getResults()
+        self.loadSpinner(true)
+    }
 }
 
