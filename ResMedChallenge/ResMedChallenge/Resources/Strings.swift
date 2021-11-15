@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Strings to use throughout the project
 extension String {
     static let errorAlertTitle = "Error"
     static let unexpectedError = "Unexpected Error"

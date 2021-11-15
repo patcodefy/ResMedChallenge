@@ -4,7 +4,7 @@
 //
 //  Created by pat on 11/11/21.
 //
-
+// This is a depedency injection class for all api requests.
 import Foundation
 
 class ApiService: ApiServicable{

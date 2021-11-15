@@ -19,6 +19,7 @@ class MainViewModel: BaseViewModel, MainViewModellable {
         self.apiService = apiService
     }
 
+    // Make api call to get results
     func getResults() {
         apiService.sportResultsRequest(onSuccess: { [ weak self ] results in
             self?.sportResults = results

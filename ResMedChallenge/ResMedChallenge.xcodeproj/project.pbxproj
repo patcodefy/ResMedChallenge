@@ -191,7 +191,6 @@
 				43717901273B79B100A88676 /* Resources */,
 				43717900273B799700A88676 /* Application */,
 				437178FF273B798A00A88676 /* Networking */,
-				437178FE273B797E00A88676 /* Components */,
 				437178FD273B797500A88676 /* Models */,
 				437178FC273B796C00A88676 /* ViewModels */,
 				437178FB273B795800A88676 /* ViewControllers */,
@@ -258,13 +257,6 @@
 				4371790A273B862300A88676 /* Responses */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		437178FE273B797E00A88676 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		437178FF273B798A00A88676 /* Networking */ = {

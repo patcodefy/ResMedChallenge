@@ -5,6 +5,7 @@
 //  Created by pat on 11/10/21.
 //
 
+// This protocol handles everything related to the network requests.
 import UIKit
 
 protocol RequestEngine {
