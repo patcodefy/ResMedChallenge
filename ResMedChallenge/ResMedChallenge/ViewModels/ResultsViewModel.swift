@@ -23,6 +23,7 @@ class ResultsViewModel: BaseViewModel, ResultsViewModellable {
     func loadData() {
         if let sportResults = sportResults?.values {
             let resultsDate = Array(sportResults).flatMap({$0}).compactMap({$0.publicationDate.toDate()})
+
             mostRecentDate = resultsDate.sorted(by: {$0.compare($1) == .orderedDescending}).first
 
             determineEligibleRecords()
@@ -31,6 +32,7 @@ class ResultsViewModel: BaseViewModel, ResultsViewModellable {
         }
     }
 
+    // Find all the results that should be displayed
     private func determineEligibleRecords() {
         guard let sportResults = sportResults else { return }
 
@@ -47,6 +49,7 @@ class ResultsViewModel: BaseViewModel, ResultsViewModellable {
         }
     }
 
+    // Create output sentence based on the category of the sport and it's format
     private func createOutput(category: String, categoryResult: SportResult) {
         switch category {
         case "f1Results":

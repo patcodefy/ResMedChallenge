@@ -17,6 +17,7 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Listen to the view model when it finds the results to display in the table
         viewModel.didGetRecentRecords = { [ weak self ] in
             guard let date = self?.viewModel.mostRecentDate?.toString() else { return }
             self?.dateTitleLabel.text = "Results for \(date)"
