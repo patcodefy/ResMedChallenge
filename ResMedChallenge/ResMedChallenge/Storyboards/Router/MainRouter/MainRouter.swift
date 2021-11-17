@@ -31,6 +31,13 @@ class MainRouter: MainRouterable {
         return vc
     }
 
+    func detailsViewController(result: SportResult) -> DetailsViewController {
+        let vc = self.mainStoryboard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        vc.result = result
+
+        return vc
+    }
+
     // View Models
     func mainViewModel() -> MainViewModellable {
         return MainViewModel(apiService: apiService)

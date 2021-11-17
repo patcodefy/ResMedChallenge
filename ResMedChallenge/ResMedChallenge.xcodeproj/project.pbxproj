@@ -38,6 +38,7 @@
 		437CB3C12740482A0094589B /* ApiServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437CB3C02740482A0094589B /* ApiServiceTest.swift */; };
 		437CB3C527404E260094589B /* ResultsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437CB3C427404E260094589B /* ResultsViewModelTests.swift */; };
 		437CB3C727404F4D0094589B /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437CB3C627404F4D0094589B /* MockData.swift */; };
+		4389E2522744CDF800F5F808 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389E2512744CDF800F5F808 /* DetailsViewController.swift */; };
 		43EDE76C273C8A150095968B /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDE76B273C8A150095968B /* HTTPMethod.swift */; };
 		43EDE76E273C8B140095968B /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDE76D273C8B140095968B /* RequestData.swift */; };
 		43EDE770273C8FC00095968B /* RequestEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDE76F273C8FC00095968B /* RequestEngine.swift */; };
@@ -97,6 +98,7 @@
 		437CB3C02740482A0094589B /* ApiServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceTest.swift; sourceTree = "<group>"; };
 		437CB3C427404E260094589B /* ResultsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModelTests.swift; sourceTree = "<group>"; };
 		437CB3C627404F4D0094589B /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		4389E2512744CDF800F5F808 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		43EDE76B273C8A150095968B /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		43EDE76D273C8B140095968B /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
 		43EDE76F273C8FC00095968B /* RequestEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEngine.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				437178CE273B790000A88676 /* MainViewController.swift */,
 				43717914273B957C00A88676 /* LoadingIndicatorViewController.swift */,
 				43717925273BA7A400A88676 /* ResultsViewController.swift */,
+				4389E2512744CDF800F5F808 /* DetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				43EDE76C273C8A150095968B /* HTTPMethod.swift in Sources */,
 				437178CF273B790000A88676 /* MainViewController.swift in Sources */,
 				4371790C273B868400A88676 /* SportResult.swift in Sources */,
+				4389E2522744CDF800F5F808 /* DetailsViewController.swift in Sources */,
 				437178CB273B790000A88676 /* AppDelegate.swift in Sources */,
 				43EDE76E273C8B140095968B /* RequestData.swift in Sources */,
 				431CBFBE273DB4F4006E3344 /* String.swift in Sources */,

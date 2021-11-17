@@ -9,10 +9,11 @@ import Foundation
 
 class ResultsViewModel: BaseViewModel, ResultsViewModellable {
 
-    var didGetRecentRecords   : (() -> Void)?
+    var didGetRecentRecords     : (() -> Void)?
 
-    var sportResults    : [String: [SportResult]]?
-    var mostRecentDate  : Date?
+    var sportResults            : [String: [SportResult]]?
+    var mostRecentDate          : Date?
+    var outputCategoryResults   : [SportResult] = []
 
     private (set) var outputSentences   : [[String]] = []
 
@@ -56,20 +57,29 @@ class ResultsViewModel: BaseViewModel, ResultsViewModellable {
             guard let seconds = categoryResult.seconds else { break }
             let output = ["\(categoryResult.winner) wins \(categoryResult.tournament) by \(seconds)", categoryResult.publicationDate]
             outputSentences.append(output)
+            outputCategoryResults.append(categoryResult)
         case "nbaResults":
             guard let mvp = categoryResult.mvp, let gameNumber = categoryResult.gameNumber else { break }
             let output = ["\(mvp) leads \(categoryResult.winner) to game \(gameNumber) in the \(categoryResult.tournament)", categoryResult.publicationDate]
             outputSentences.append(output)
+            outputCategoryResults.append(categoryResult)
         case "Tennis":
             guard let loser = categoryResult.looser?.trimmingCharacters(in: .whitespaces), let sets = categoryResult.numberOfSets else { break }
             let output = ["\(categoryResult.tournament): \(categoryResult.winner) wins against \(loser) in \(sets)", categoryResult.publicationDate]
             outputSentences.append(output)
+            outputCategoryResults.append(categoryResult)
         default:
             break
         }
 
         outputSentences.sort{ $0[1].toDate().compare($1[1].toDate()) == .orderedDescending }
+        outputCategoryResults.sort { $0.publicationDate.toDate().compare($1.publicationDate.toDate()) == .orderedDescending}
+
     }
 
 }
 
+// TODO
+
+//1. Add Details page
+//2. Check for internet connection
