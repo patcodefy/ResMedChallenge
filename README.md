@@ -12,7 +12,7 @@ Requirements
 
 # Demo-Preview
 
-![demo](https://j.gifs.com/28GJ3J.gif)
+![demo](https://j.gifs.com/NO7B7z.gif)
 
 # Installation
 - Clone the repo. 
