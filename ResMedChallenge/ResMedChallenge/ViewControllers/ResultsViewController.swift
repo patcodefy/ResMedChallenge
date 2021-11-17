@@ -46,5 +46,14 @@ extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = Router.instance.mainStoryboard.detailsViewController(result: viewModel.outputCategoryResults[indexPath.item])
+
+        present(vc, animated: true, completion: nil)
+    }
+
 }
+
+
+
 

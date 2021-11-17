@@ -92,6 +92,83 @@
             </objects>
             <point key="canvasLocation" x="644" y="138"/>
         </scene>
+        <!--Details View Controller-->
+        <scene sceneID="uPO-BK-Yet">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" id="sLj-MD-ZqA" customClass="DetailsViewController" customModule="ResMedChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P9F-BH-NFd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tournament" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="7Yu-tR-V09">
+                                <rect key="frame" x="20" y="44" width="374" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 9, 2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVo-xD-N5x">
+                                <rect key="frame" x="171.5" y="96" width="71" height="14.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lmN-He-rbL">
+                                <rect key="frame" x="87" y="234" width="240" height="662"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="48" translatesAutoresizingMaskIntoConstraints="NO" id="I72-cu-7F6">
+                                        <rect key="frame" x="95.5" y="274.5" width="49" height="113.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="95"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.56659094669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="6fo-MF-fbG"/>
+                                    <constraint firstItem="I72-cu-7F6" firstAttribute="centerX" secondItem="lmN-He-rbL" secondAttribute="centerX" id="F2n-aQ-Cuc"/>
+                                    <constraint firstItem="I72-cu-7F6" firstAttribute="centerY" secondItem="lmN-He-rbL" secondAttribute="centerY" id="bUz-7O-MEw"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ddcdcds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="lAi-Wm-1v7" userLabel="Winner">
+                                <rect key="frame" x="159" y="187.5" width="96" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Winner is: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oX9-Ae-IXd">
+                                <rect key="frame" x="109" y="130.5" width="196" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="b3X-oX-ZHT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b3X-oX-ZHT" firstAttribute="trailing" secondItem="7Yu-tR-V09" secondAttribute="trailing" constant="20" id="2Zw-uS-fZO"/>
+                            <constraint firstItem="lmN-He-rbL" firstAttribute="centerX" secondItem="P9F-BH-NFd" secondAttribute="centerX" id="30U-xL-Nfd"/>
+                            <constraint firstItem="lAi-Wm-1v7" firstAttribute="centerX" secondItem="P9F-BH-NFd" secondAttribute="centerX" id="5bq-xX-imK"/>
+                            <constraint firstAttribute="bottom" secondItem="lmN-He-rbL" secondAttribute="bottom" id="Gye-VG-XbI"/>
+                            <constraint firstItem="lmN-He-rbL" firstAttribute="top" secondItem="lAi-Wm-1v7" secondAttribute="bottom" constant="20" id="Nb2-GT-Dbb"/>
+                            <constraint firstItem="7Yu-tR-V09" firstAttribute="top" secondItem="b3X-oX-ZHT" secondAttribute="top" id="g3Y-VR-sgQ"/>
+                            <constraint firstItem="lAi-Wm-1v7" firstAttribute="top" secondItem="oX9-Ae-IXd" secondAttribute="bottom" constant="20" id="iJE-PT-3EP"/>
+                            <constraint firstItem="oX9-Ae-IXd" firstAttribute="centerX" secondItem="P9F-BH-NFd" secondAttribute="centerX" id="kAP-MZ-h1G"/>
+                            <constraint firstItem="vVo-xD-N5x" firstAttribute="centerX" secondItem="P9F-BH-NFd" secondAttribute="centerX" id="rZY-re-8SH"/>
+                            <constraint firstItem="vVo-xD-N5x" firstAttribute="top" secondItem="7Yu-tR-V09" secondAttribute="bottom" constant="10" id="ujs-7L-4r5"/>
+                            <constraint firstItem="7Yu-tR-V09" firstAttribute="leading" secondItem="b3X-oX-ZHT" secondAttribute="leading" constant="20" id="vPp-U0-2S2"/>
+                            <constraint firstItem="oX9-Ae-IXd" firstAttribute="top" secondItem="vVo-xD-N5x" secondAttribute="bottom" constant="20" id="z69-K1-16P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateUILabel" destination="vVo-xD-N5x" id="6Ie-Qf-rc6"/>
+                        <outlet property="tournamentUILabel" destination="7Yu-tR-V09" id="pEU-c3-uZV"/>
+                        <outlet property="winnerUILabel" destination="lAi-Wm-1v7" id="kIn-vU-mcP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="32j-Ta-Szf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1282.608695652174" y="140.625"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
